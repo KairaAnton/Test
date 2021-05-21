@@ -1,0 +1,92 @@
+$font900: 900
+$flex: flex
+$column: column
+$spaceBeetwen: space-between
+
+%circle
+    width: 75px
+    height: 75px
+    border-radius: 50%
+            
+
+.card
+
+    display: $flex
+    flex-direction: $column
+    justify-content: $spaceBeetwen
+    border-radius: 9px
+    min-width: 250px
+    background-color: #FFFFFF
+    padding: 20px 30px 20px 10px 
+    margin:  10px 30px
+    -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6)
+    -moz-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6)
+    box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6)
+
+    .countContainer
+        padding: 0 0 30px
+
+    section
+        display: $flex
+        justify-content: $spaceBeetwen
+        
+        .circleRed
+            @extend %circle
+            background-color: red
+
+        .circleBlue
+            @extend %circle
+            background-color: blue
+    
+        .circleGreen
+            @extend %circle
+            background-color: green
+
+        .circleYellow
+            @extend %circle
+            background-color: yellow
+
+        .circleCyan
+            @extend %circle
+            background-color: cyan
+
+        .circleMagenta
+            @extend %circle
+            background-color: magenta
+
+        .circleBlack
+            @extend %circle
+            background-color: black
+
+        .circleGray
+            @extend %circle
+            background-color: gray
+
+        .count
+            display: $flex
+            flex-direction: $column  
+            justify-content: flex-start
+            
+
+            h3
+                margin: 0
+                padding: 0 0 20px
+
+        a:hover
+            cursor: pointer
+
+        .countMinus
+            color: magenta
+            font-size: 1.4em
+            font-weight: $font900
+
+        .countPlus
+            color: green  
+            font-size: 1.4em
+            font-weight: $font900       
+
+.card:hover
+    border-radius: 0
+    outline: 3px solid green
+
+

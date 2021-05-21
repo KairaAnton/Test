@@ -1,0 +1,83 @@
+$paddingLeft: 0 0 0 30px
+$minWidth: 100%
+$flex: flex
+$center: center
+$flexStart: flex-start
+$padding10: 10px
+
+%displayFlex
+    display: $flex
+    flex-direction: column
+    align-items: $center
+
+header
+    min-height: 50px
+    min-width: $minWidth
+    background-color: #FFFFE0
+    margin: 0
+    padding: $padding10
+
+main
+    @extend %displayFlex
+    justify-content: $flexStart
+    background-color: #E6E6FA
+    
+    .mainContainer
+        @extend %displayFlex
+        justify-content: $flexStart
+        min-width: 40%
+        background-color: #F5FFFA
+
+        .mainHeader
+            @extend %displayFlex
+            align-items: $flexStart
+            justify-content: $flexStart
+            border: 0
+            min-width: $minWidth
+
+            h4
+                padding: $paddingLeft
+
+            .iconContainer
+                display: $flex
+                padding: $paddingLeft
+                color: #8A2BE2
+
+        .cardContainer
+            display: grid
+            grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr
+            min-width: $minWidth
+            
+footer
+    display: $flex
+    justify-content: $center
+    align-items: $center
+    min-height: 50px
+    padding: $padding10
+    min-width: $minWidth
+    background-color: #FFDAB9
+
+
+@media (max-width: 1440px)
+
+    .mainContainer    
+        width: 85%
+
+
+@media (max-width: 1024px)
+
+    .mainContainer    
+        width: $minWidth
+        
+
+
+@media (max-width: 425px)
+            
+    .mainHeader
+        display: none !important
+
+    .cardContainer
+        display: $flex !important
+        flex-direction: column
+        align-items: $center
+            
